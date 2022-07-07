@@ -1,12 +1,11 @@
 chrome.runtime.onInstalled.addListener(() => {
     chrome.action.disable();
     chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
-        let rule = {
+        chrome.declarativeContent.onPageChanged.addRules([{
             conditions: [new chrome.declarativeContent.PageStateMatcher({
-                pageUrl: { hostSuffix: 'whenisgood.net' },
+                pageUrl: { hostSuffix: 'whenisgood.net', pathContains: 'results' },
             })],
             actions: [new chrome.declarativeContent.ShowAction()]
-        };
-        chrome.declarativeContent.onPageChanged.addRules([rule]);
+        }]);
     });
 });
