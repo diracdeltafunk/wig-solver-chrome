@@ -1,0 +1,53 @@
+{
+    "name": "wig-solver",
+    "description": "Automatically find an optimal set of times to ensure full coverage on whenisgood",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "declarativeContent"
+    ],
+    "host_permissions": [
+        "*://*.whenisgood.net/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.whenisgood.net/*"
+            ],
+            "js": [
+                "contentscript.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "inject.js"
+            ],
+            "matches": [
+                "*://*.whenisgood.net/*"
+            ]
+        }
+    ],
+    "action": {
+        "default_title": "Wig Solver",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/get_started16.png",
+            "32": "/images/get_started32.png",
+            "48": "/images/get_started48.png",
+            "128": "/images/get_started128.png"
+        }
+    },
+    "icons": {
+        "16": "/images/get_started16.png",
+        "32": "/images/get_started32.png",
+        "48": "/images/get_started48.png",
+        "128": "/images/get_started128.png"
+    }
+}
