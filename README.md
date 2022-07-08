@@ -1,6 +1,6 @@
 # wig-solver-chrome
 
-A chrome extension that allows you to call [wig-solver](https://github.com/diracdeltafunk/wig-solver) from any Whenisgood results page.
+A chrome extension that allows you to call [wig-solver](https://github.com/diracdeltafunk/wig-solver) from any [Whenisgood](https://whenisgood.net) results page.
 
 When you press the solve button, the extension finds the smallest collection of time slots which together accomodate everyone. This make take a few seconds, especially since the API is running on a free server!
 
