@@ -30,11 +30,22 @@ function callAPI() {
         return res.json();
     }).then(data => {
         for (i of data) {
-            document.getElementById(i).style.backgroundColor = '#7777ff';
+            document.getElementById(i).classList.add('wigHighlight');
         }
     }).catch(e => {
         console.error(e);
     });
 }
 
+function clear() {
+    for (r of grid.rows) {
+        for (c of r.cells) {
+            if (c.id != '') {
+                c.classList.remove('wigHighlight');
+            }
+        }
+    }
+}
+
 document.addEventListener('wigSolve', callAPI);
+document.addEventListener('clearSolns', clear);
