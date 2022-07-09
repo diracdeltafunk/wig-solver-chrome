@@ -20,6 +20,7 @@ clearButton.addEventListener("click", async () => {
 });
 
 function fireWigSolve() {
+    document.dispatchEvent(new CustomEvent('clearSolns'));
     document.dispatchEvent(new CustomEvent('wigSolve'));
 }
 
