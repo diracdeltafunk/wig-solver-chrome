@@ -22,10 +22,10 @@ function callAPI() {
     for (t of times) {
         sets.push({ [t]: peopleForTime(t) });
     }
-    fetch("https://wig-solver.herokuapp.com/solve", {
+    fetch("https://wig-solver.onrender.com/solve", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(sets)
+        body: JSON.stringify({ "sets": sets })
     }).then(res => {
         return res.json();
     }).then(data => {
