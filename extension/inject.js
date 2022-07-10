@@ -2,7 +2,7 @@ function peopleForTime(t) {
     let result = [];
     for (i in respondents) {
         r = respondents[i];
-        if (r.myCanDos.includes(t.toString())) {
+        if (r.included && r.myCanDos.includes(t.toString())) {
             result.push(r.id);
         }
     }
