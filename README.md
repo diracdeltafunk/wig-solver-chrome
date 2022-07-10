@@ -6,6 +6,7 @@ When you press the solve button, the extension finds an optimal collection of ti
 * Find a minimal set of times which cover everyone
 * Find a minimal set of times which cover everyone, except at most n people
 * Find a set of at most n times which cover a maximal number of people
+
 This make take a few seconds, especially since the API is running on a free server!
 
 ## Installation
