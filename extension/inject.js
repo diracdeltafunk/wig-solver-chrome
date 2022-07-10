@@ -23,7 +23,7 @@ function callAPI(config = { "method": "strict" }) {
         sets.push({ [t]: peopleForTime(t) });
     }
     let post_data = { ...config, sets: sets };
-    fetch("https://wig-solver.onrender.com/solve", {
+    fetch("https://api.wig-solver.app/solve", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(post_data)
