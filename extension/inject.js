@@ -33,7 +33,7 @@ function callAPI(config = { "method": "strict" }) {
         for (i of data) {
             document.getElementById(i).classList.add('wigHighlight');
         }
-    }).catch(e => {
+    }).catch((e) => {
         console.error(e);
     });
 }
