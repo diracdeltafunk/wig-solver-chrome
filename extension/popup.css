@@ -5,6 +5,16 @@ button {
     border-radius: 2px;
 }
 
-div {
+.flex {
     display: flex;
+    flex-wrap: wrap;
+}
+
+div.radio {
+    width: 200px;
+}
+
+#param_relaxed,
+#param_transpose {
+    width: 20px;
 }

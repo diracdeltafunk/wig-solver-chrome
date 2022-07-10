@@ -9,7 +9,7 @@ function peopleForTime(t) {
     return result;
 }
 
-function callAPI() {
+function callAPI(config = { "method": "strict" }) {
     let times = [];
     for (r of grid.rows) {
         for (c of r.cells) {
@@ -22,10 +22,11 @@ function callAPI() {
     for (t of times) {
         sets.push({ [t]: peopleForTime(t) });
     }
+    let post_data = { ...config, sets: sets };
     fetch("https://wig-solver.onrender.com/solve", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ "sets": sets })
+        body: JSON.stringify(post_data)
     }).then(res => {
         return res.json();
     }).then(data => {
@@ -47,5 +48,5 @@ function clear() {
     }
 }
 
-document.addEventListener('wigSolve', callAPI);
+document.addEventListener('wigSolve', (e) => { callAPI(e.detail); });
 document.addEventListener('clearSolns', clear);

@@ -6,7 +6,21 @@
 </head>
 
 <body>
-    <div>
+    <div class="flex">
+        <div class="radio">
+            <input type="radio" name="method" value="strict" id="method_strict" checked>
+            <label for="method_strict">Cover all respondents</label>
+        </div>
+        <div class="radio">
+            <input type="radio" name="method" value="relaxed" id="method_relaxed">
+            <label for="method_relaxed">Cover all but at most <input type="text" id="param_relaxed" value="1">
+                respondent(s)</label>
+        </div>
+        <div class="radio">
+            <input type="radio" name="method" value="transpose" id="method_transpose">
+            <label for="method_transpose">Use at most <input type="text" id="param_transpose" value="2">
+                time slots</label>
+        </div>
         <button id="solve">Solve</button>
         <button id="clear">Clear</button>
     </div>
