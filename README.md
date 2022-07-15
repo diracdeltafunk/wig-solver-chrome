@@ -12,6 +12,6 @@ This make take a few seconds, especially since the API is running on a free serv
 
 ## Manual Installation
 
-You can load the `extension` directly into chromium-based browsers as an unpacked extension.
+You can load the `extension` directory into chromium-based browsers as an unpacked extension.
 
 ![Screenshot of a Whenisgood results page, with two boxes highlighted in blue by wig solver!](ss2.png?raw=true)
