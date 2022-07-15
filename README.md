@@ -1,4 +1,5 @@
 # wig-solver-chrome
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ngenolmnmkjiobmdbnikmphoaecdlcaa?label=Install&logo=googlechrome&logoColor=white&style=for-the-badge)](https://chrome.google.com/webstore/detail/wig-solver/ngenolmnmkjiobmdbnikmphoaecdlcaa)
 
 A chrome extension that allows you to call [wig-solver](https://github.com/diracdeltafunk/wig-solver) from any [Whenisgood](https://whenisgood.net) results page.
 
@@ -9,8 +10,8 @@ When you press the solve button, the extension finds an optimal collection of ti
 
 This make take a few seconds, especially since the API is running on a free server!
 
-## Installation
+## Manual Installation
 
-You can load the extension directly into chrome. Simply clone the repository and load the folder "extension" as an unpacked extension. wig-solver will also be up on the chrome web store soon!
+You can load the `extension` directly into chromium-based browsers as an unpacked extension.
 
 ![Screenshot of a Whenisgood results page, with two boxes highlighted in blue by wig solver!](ss2.png?raw=true)
